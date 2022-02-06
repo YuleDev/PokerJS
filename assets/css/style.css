@@ -5,3 +5,9 @@
     min-height: 100%;
     min-width: 100%;
 }
+
+.startMatchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
