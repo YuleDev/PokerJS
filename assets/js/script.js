@@ -43,7 +43,7 @@ playerCard2.classList.add("playerHand");
 const hitMeEl = document.createElement("button");
 hitMeEl.textContent = "Hit me partner!";
 const foldCardsEl = document.createElement("button");
-foldCardsEl.textContent = "I'm backin out pardner";
+foldCardsEl.textContent = "I'm backin' out partner.";
 
 function getStartingHand(deckImagesArr, num) {
     const shuffled = [...deckImagesArr].sort(() => 0.5 - Math.random());
