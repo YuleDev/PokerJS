@@ -27,12 +27,19 @@ const startingButtonEl = document.createElement("button");
 const startingDivEl = document.getElementById("startMatchContainer");
 startingButtonEl.textContent = "Wanna play a game partner?";
 startingButtonEl.id = "startMatchButton";
+
 let dealerHand = document.createElement("img");
+let dealerHand2 = document.createElement("img");
+let dealerHand3 = document.createElement("img");
 dealerHand.classList.add("dealerHand");
+dealerHand2.classList.add("dealerHand");
+dealerHand3.classList.add("dealerHand");
+
 let playerCard1 = document.createElement("img");
 let playerCard2 = document.createElement("img");
 playerCard1.classList.add("playerHand");
 playerCard2.classList.add("playerHand");
+
 const hitMeEl = document.createElement("button");
 hitMeEl.textContent = "Hit me partner!";
 const foldCardsEl = document.createElement("button");
@@ -52,17 +59,22 @@ let dealWithTheDevil = function () {
 
 let flipAnotherCard = function () {
     /* dealerHand.insertAdjacentText("beforeend", "," + getStartingHand(deckArr, 1)) */
-    /* startingDivEl.appendChild(dealerHand);
-    dealerHand.setAttribute("src", (getStartingHand(deckImagesArr, 1))); */
+    startingDivEl.append(dealerHand);
+    dealerHand.setAttribute("src", (getStartingHand(deckImagesArr, 1)));
 
 }
 
 let lostMoneyCowPoke = function () {
-    startingDivEl.removeChild(dealerHand);
+    document.querySelectorAll('.dealerHand').forEach(function (a) {
+        a.remove()
+    })
+
     startingDivEl.removeChild(playerCard1);
     startingDivEl.removeChild(playerCard2);
+
     startingDivEl.removeChild(hitMeEl);
     startingDivEl.removeChild(foldCardsEl);
+
     dealWithTheDevil();
 }
 
@@ -72,11 +84,18 @@ let aDangerousGame = function () {
     startingDivEl.removeChild(startingButtonEl);
 
     /* dealerHand.innerHTML = (getStartingHand(deckArr, 3)); */
+    /*  for (let i = 0; i < (getStartingHand(deckImagesArr, 3)).length; i++) {
+         startingDivEl.appendChild(dealerHand)[i];
+         dealerHand.setAttribute("src", (getStartingHand(deckImagesArr)[i]));
+     } */
 
-    for (let i = 0; i < (getStartingHand(deckImagesArr, 3)).length; i++) {
-        startingDivEl.appendChild(dealerHand)[i];
-        dealerHand.setAttribute("src", (getStartingHand(deckImagesArr)[i]));
-    }
+    startingDivEl.appendChild(dealerHand);
+    startingDivEl.appendChild(dealerHand2);
+    startingDivEl.appendChild(dealerHand3);
+
+    dealerHand.setAttribute("src", (getStartingHand(deckImagesArr, 1)));
+    dealerHand2.setAttribute("src", (getStartingHand(deckImagesArr, 1)));
+    dealerHand3.setAttribute("src", (getStartingHand(deckImagesArr, 1)));
 
     startingDivEl.appendChild(playerCard1);
     startingDivEl.appendChild(playerCard2);
