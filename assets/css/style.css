@@ -14,18 +14,14 @@
 
 .dealerHand {
     display: flex;
-    flex-wrap: wrap;
-    padding:20px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 5px;
+    justify-items: baseline;
+    max-width: 15%;
+    max-height: 25%;
 }
 
 .playerHand {
     display: flex;
-    flex-wrap: wrap;
-    padding:20px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 5px;
+    justify-items: baseline;
+    max-width: 10%;
+    max-height: 20%;
 }
