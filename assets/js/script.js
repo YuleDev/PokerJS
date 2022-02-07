@@ -13,7 +13,9 @@ dealerHand.classList.add("dealerHand");
 let playerHand = document.createElement("h1");
 playerHand.classList.add("playerHand");
 const hitMeEl = document.createElement("button");
-hitMeEl.textContent = "Hit me partner!"
+hitMeEl.textContent = "Hit me partner!";
+const foldCardsEl = document.createElement("button");
+foldCardsEl.textContent = "I'm backin out pardner";
 
 function getStartingHand(deckArr, num) {
     const shuffled = [...deckArr].sort(() => 0.5 - Math.random());
@@ -32,6 +34,14 @@ let flipAnotherCard = function() {
     dealerHand.insertAdjacentText("afterbegin", getStartingHand(deckArr, 1) + ",")
 }
 
+let lostMoneyCowPoke = function() {
+    startingDivEl.removeChild(dealerHand);
+    startingDivEl.removeChild(playerHand);
+    startingDivEl.removeChild(hitMeEl);
+    startingDivEl.removeChild(foldCardsEl);
+    dealWithTheDevil();
+}
+
 dealWithTheDevil();
 
 let aDangerousGame = function() {
@@ -42,7 +52,9 @@ let aDangerousGame = function() {
     startingDivEl.appendChild(playerHand);
 
     startingDivEl.appendChild(hitMeEl);
+    startingDivEl.appendChild(foldCardsEl);
     hitMeEl.addEventListener("click", flipAnotherCard);
+    foldCardsEl.addEventListener("click", lostMoneyCowPoke);
 };
 
 startingButtonEl.addEventListener("click", aDangerousGame);
