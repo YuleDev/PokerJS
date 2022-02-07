@@ -51,17 +51,15 @@ function getStartingHand(deckImagesArr, num) {
     return shuffled.slice(0, num);
 };
 
-console.log(getStartingHand(deckImagesArr, 2));
-
 let dealWithTheDevil = function () {
     startingDivEl.appendChild(startingButtonEl);
 };
 
 let flipAnotherCard = function () {
-    /* dealerHand.insertAdjacentText("beforeend", "," + getStartingHand(deckArr, 1)) */
-    startingDivEl.append(dealerHand);
-    dealerHand.setAttribute("src", (getStartingHand(deckImagesArr, 1)));
-
+    let flippedCard = document.createElement("img");
+    flippedCard.classList.add("dealerHand");
+    flippedCard.setAttribute("src", (getStartingHand(deckImagesArr, 1)));
+    dealerHand3.insertAdjacentElement("beforebegin", flippedCard);
 }
 
 let lostMoneyCowPoke = function () {
@@ -109,9 +107,9 @@ let aDangerousGame = function () {
     hitMeEl.addEventListener("click", flipAnotherCard);
     foldCardsEl.addEventListener("click", lostMoneyCowPoke);
 
-    if (dealerHand == 5) {
-        /* check dealer hand and player hand to find a score */
-    }
+    /* if (dealerHand == 5) {
+        check dealer hand and player hand to find a score
+    } */
 };
 
 startingButtonEl.addEventListener("click", aDangerousGame);
