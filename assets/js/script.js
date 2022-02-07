@@ -63,6 +63,29 @@ let aDangerousGame = function() {
 
 startingButtonEl.addEventListener("click", aDangerousGame);
 
+
+
+const deckImagesArr = ["assets/images/deckOfCards/2_of_clubs.png", "assets/images/deckOfCards/2_of_diamonds.png",
+"assets/images/deckOfCards/2_of_hearts.png","assets/images/deckOfCards/2_of_spades.png","assets/images/deckOfCards/3_of_clubs.png",
+"assets/images/deckOfCards/3_of_diamonds.png","assets/images/deckOfCards/3_of_hearts.png","assets/images/deckOfCards/3_of_spades.png",
+"assets/images/deckOfCards/4_of_clubs.png","assets/images/deckOfCards/4_of_diamonds.png","assets/images/deckOfCards/4_of_hearts.png",
+"assets/images/deckOfCards/4_of_spades.png","assets/images/deckOfCards/5_of_clubs.png","assets/images/deckOfCards/5_of_diamonds.png",
+"assets/images/deckOfCards/5_of_hearts.png","assets/images/deckOfCards/5_of_spades.png","assets/images/deckOfCards/6_of_clubs.png",
+"assets/images/deckOfCards/6_of_diamonds.png","assets/images/deckOfCards/6_of_hearts.png","assets/images/deckOfCards/6_of_spades.png",
+"assets/images/deckOfCards/7_of_clubs.png","assets/images/deckOfCards/7_of_diamonds.png","assets/images/deckOfCards/7_of_hearts.png",
+"assets/images/deckOfCards/7_of_spades.png","assets/images/deckOfCards/8_of_clubs.png","assets/images/deckOfCards/8_of_diamonds.png",
+"assets/images/deckOfCards/8_of_hearts.png","assets/images/deckOfCards/8_of_spades.png","assets/images/deckOfCards/9_of_clubs.png",
+"assets/images/deckOfCards/9_of_diamonds.png","assets/images/deckOfCards/9_of_hearts.png","assets/images/deckOfCards/9_of_spades.png",
+"assets/images/deckOfCards/10_of_clubs.png","assets/images/deckOfCards/10_of_diamonds.png","assets/images/deckOfCards/10_of_hearts.png",
+"assets/images/deckOfCards/10_of_spades.png","assets/images/deckOfCards/jack_of_clubs.png","assets/images/deckOfCards/jack_of_diamonds.png",
+"assets/images/deckOfCards/jack_of_hearts.png","assets/images/deckOfCards/jack_of_spades.png","assets/images/deckOfCards/queen_of_clubs.png",
+"assets/images/deckOfCards/queen_of_diamonds.png","assets/images/deckOfCards/queen_of_hearts.png","assets/images/deckOfCards/queen_of_spades.png",
+"assets/images/deckOfCards/king_of_clubs.png","assets/images/deckOfCards/king_of_diamonds.png","assets/images/deckOfCards/king_of_hearts.png",
+"assets/images/deckOfCards/king_of_spades.png","assets/images/deckOfCards/ace_of_clubs.png","assets/images/deckOfCards/ace_of_diamonds.png",
+"assets/images/deckOfCards/ace_of_hearts.png","assets/images/deckOfCards/ace_of_spades.png"];
+
+
+
 /* create a new array of images sources
 use a for loop to assign image sources to appended card images?
 have the dealer and player hands draw from the array of image sources 
