@@ -31,7 +31,7 @@ let dealWithTheDevil = function() {
 
 let flipAnotherCard = function() {
     /* grab another card from the deck, add it into displayed dealer cards */
-    dealerHand.insertAdjacentText("afterbegin", getStartingHand(deckArr, 1) + ",")
+    dealerHand.insertAdjacentText("beforeend", "," + getStartingHand(deckArr, 1))
 }
 
 let lostMoneyCowPoke = function() {
