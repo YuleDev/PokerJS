@@ -11,3 +11,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.dealerHand {
+    display: flex;
+    flex-wrap: wrap;
+    padding:20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.playerHand {
+    display: flex;
+    flex-wrap: wrap;
+    padding:20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px;
+}

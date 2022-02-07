@@ -8,6 +8,12 @@ const startingButtonEl = document.createElement("button");
 const startingDivEl = document.getElementById("startMatchContainer");
 startingButtonEl.textContent = "Wanna play a game partner?";
 startingButtonEl.id = "startMatchButton";
+let dealerHand = document.createElement("h1");
+dealerHand.classList.add("dealerHand");
+let playerHand = document.createElement("h1");
+playerHand.classList.add("playerHand");
+const hitMeEl = document.createElement("button");
+hitMeEl.textContent = "Hit me partner!"
 
 function getStartingHand(deckArr, num) {
     const shuffled = [...deckArr].sort(() => 0.5 - Math.random());
@@ -21,15 +27,25 @@ let dealWithTheDevil = function() {
     startingDivEl.appendChild(startingButtonEl);
 };
 
+let flipAnotherCard = function() {
+    /* grab another card from the deck, add it into displayed dealer cards */
+    dealerHand.insertAdjacentText("afterbegin", getStartingHand(deckArr, 1) + ",")
+}
+
 dealWithTheDevil();
 
 let aDangerousGame = function() {
-    let removeStart = document.getElementById("startMatchButton");
-    removeStart.remove;
+    startingDivEl.removeChild(startingButtonEl);
+    dealerHand.innerHTML = (getStartingHand(deckArr, 3));
+    startingDivEl.appendChild(dealerHand);
+    playerHand.innerHTML = (getStartingHand(deckArr, 2));
+    startingDivEl.appendChild(playerHand);
+
+    startingDivEl.appendChild(hitMeEl);
+    hitMeEl.addEventListener("click", flipAnotherCard);
 };
 
-let removeStart = document.getElementById("startMatchButton");
-startingButtonEl.addEventListener("click", aDangerousGame(event));
+startingButtonEl.addEventListener("click", aDangerousGame);
 
 
 /* on start of site have wanna play a game button display
