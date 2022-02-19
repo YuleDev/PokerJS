@@ -12,8 +12,8 @@
 }
 
 .startMatchContainer {
-    height: auto;
-    width: auto;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,13 +26,21 @@
     max-height: 25%;
 }
 
-.playerHand {
-    display: flex;
-    flex-wrap: wrap;
+.playerHandOne {
+    display: inline;
     position: absolute;
     /* absolute and fixed force one card on top of another */
     bottom: 0;
-    justify-items: baseline;
+    right: auto;
+    max-width: 10%;
+    max-height: 20%;
+}
+
+.playerHandTwo {
+    display: inline;
+    position:absolute;
+    bottom: 0;
+    left: auto;
     max-width: 10%;
     max-height: 20%;
 }

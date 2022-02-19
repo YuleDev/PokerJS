@@ -31,8 +31,8 @@ dealerHand3.classList.add("dealerHand");
 
 let playerCard1 = document.createElement("img");
 let playerCard2 = document.createElement("img");
-playerCard1.classList.add("playerHand");
-playerCard2.classList.add("playerHand");
+playerCard1.classList.add("playerHandOne");
+playerCard2.classList.add("playerHandTwo");
 
 const hitMeEl = document.createElement("button");
 hitMeEl.textContent = "Hit me partner!";
