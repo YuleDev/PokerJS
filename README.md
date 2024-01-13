@@ -4,7 +4,7 @@
 pokerJS is a fun game to play. It uses JS, HTML and CSS to create a texas holdem like environment to play.
 
 ## link to repo
-https://github.com/BullMooseDev/PokerJS
+https://github.com/YuleDev/PokerJS
 
 ## link to deployed page
-https://bullmoosedev.github.io/PokerJS/
+https://YuleDev.github.io/PokerJS/
